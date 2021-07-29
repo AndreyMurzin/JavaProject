@@ -5,6 +5,16 @@
 <web-app>
     <display-name>Home!!!</display-name>
 
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>filtres.EncodingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <session-config>
         <session-timeout>360</session-timeout>
     </session-config>

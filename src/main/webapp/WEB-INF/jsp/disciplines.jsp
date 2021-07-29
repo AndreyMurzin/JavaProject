@@ -22,12 +22,13 @@
         </tr>
     </c:forEach>
 </table>
-
+<c:if test="${role == 1}">
 <form action="/discipline-create" method="get">
     <input type="submit" value="Создать дисциплину ...">
 </form>
 <input type="submit" onclick="modifyDiscipline()" value="Модифицировать выбранную дисциплину ...">
 <input onclick="deleteDisciplines()" type="submit" value="Удалить выбранные дисциплины ...">
+</c:if>
 
 <form id="formModify" action="/discipline-modify" method="get">
     <input type="hidden" id="hiddenModify" name="hiddenModify">
